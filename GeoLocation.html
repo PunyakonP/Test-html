@@ -45,20 +45,9 @@
         crossorigin="anonymous"></script>
 </body>
 
-<script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-analytics.js";
-    const x = document.getElementById("demo");
 
-    const firebaseConfig = {
-        apiKey: "AIzaSyDwP-7EO014tEAnFaRt1wJxqzKc_Lobcb0",
-        authDomain: "test-html-f12a8.firebaseapp.com",
-        projectId: "test-html-f12a8",
-        storageBucket: "test-html-f12a8.appspot.com",
-        messagingSenderId: "352913025781",
-        appId: "1:352913025781:web:adc44a3daba386c95b73bc",
-        measurementId: "G-7PKR1V3N81"
-    };
+<script>
+    const x = document.getElementById("demo");
 
     function getLocation() {
         if (navigator.geolocation) {
@@ -83,7 +72,7 @@
         // distance(lat1, lon1, lat2, lon2, unit)
         var p1 = new google.maps.LatLng(lat1, lon1);
         var p2 = new google.maps.LatLng(lat2, lon2);
-        var distance = calcDistance(p1, p2) * 1;
+        var distance = calcDistance(p1, p2) * 1000;
         console.log(distance)
         // const userPosition = {
         //     lat: position.coords.latitude,
